@@ -5,10 +5,11 @@ include_once("./func.php");
 
 function ED_displayFuel()
 {
+	$fuelcap = ED_getContentFromEvent("Loadout", "FuelCapacity");
 	$statuscontent = file_get_contents($GLOBALS["ed_journal_folder"]."\Status.json");
 	$status = json_decode($statuscontent, true);
 	$fuel = $status["Fuel"]["FuelMain"];
-	$value = $fuel / 32.0;
+	$value = $fuel / $fuelcap["Main"];
 	
 	$hght = 312 - (312*$value);
 	
