@@ -115,7 +115,7 @@ body { margin: 0px; background-color: #000000;}
 	display: flex;
   	justify-content: center;
   	align-items: center;
-    animation: glowing_red 1000ms infinite;
+    animation: glowing_red 2000ms infinite;
     border-radius: 10px;
 }
 .ed_statusbox_green
