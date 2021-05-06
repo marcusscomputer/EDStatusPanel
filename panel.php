@@ -49,9 +49,10 @@ echo $id[0] . " [" . $id[1]. "]";
 <br>
 <center><font class="ed_section_header">CURRENT LOCATION</font><br><br>
 <font class="ed_section_text"> <?php $p = ED_getLocation(); echo $p[0]; ?> </font><br>
-<font class="ed_section_text_small"> <?php echo $p[3]; ?></font><br><br><br>
+<font class="ed_section_text_small"> <?php $j = ED_getNextJump(); if (count($j) > 0) { echo "NEXT JUMP: ".$j[0]." - Star: " . $j[1]; } ?></font><br><br><br>
 <font class="ed_section_text_small"> <b>COORDINATES</b><br> <?php echo $p[1][0]." : ".$p[1][1]." : ".$p[1][2]; ?> </font><br><br>
 <font class="ed_section_text_small"> <b>LAST JUMP DISTANCE</b><br> <?php echo $p[2]; ?> LY</font><br><br>
+<font class="ed_section_text_small"> <b>DISTANCE TO SOL:</b><br> <?php echo round( ED_DistToSol() , 2); ?> LY</font><br><br>
 </center>
 </td>
 <td valign=middle align=left width=50%>

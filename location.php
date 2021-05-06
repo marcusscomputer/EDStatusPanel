@@ -31,4 +31,44 @@ function ED_getLocation()
 	return $r;
 }
 
+
+function ED_getNextJump()
+{
+	$j = array();
+
+	$routefile = $GLOBALS["ed_journal_folder"]."/NavRoute.json";
+	if (file_exists($routefile) == true)
+	{
+		$locdata = ED_getLocation();
+		$loc = $locdata[0];
+
+		$routedata = file_get_contents($routefile);
+		$route = json_decode($routedata, true);
+
+		for ($i=0; $i<count($route["Route"])-1; $i++)
+		{
+			if ($route["Route"][$i]["StarSystem"] == $loc && $i <= count($route["Route"])-1)
+			{ $j[] = $route["Route"][$i+1]["StarSystem"]; $j[] = $route["Route"][$i+1]["StarClass"]; break; }
+		}
+	}
+
+	return $j;
+}
+
+
+function ED_DistToSol()
+{
+	$p = ED_getLocation();
+	$d = sqrt
+	(
+		pow($p[1][0] - 0.0, 2) +  
+		pow($p[1][1] - 0.0, 2) +  
+		pow($p[1][2] - 0.0, 2)
+		* 1.0
+	);
+
+	return $d;
+}
+
+
 ?>
