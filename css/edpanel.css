@@ -8,7 +8,7 @@
     src: url('ttf/EurostileBold.ttf'); /*URL to font*/
 }
 
-body { margin: 0px; background-color: #000000;}
+body { margin: 0px; background-color: #040404;}
 
 .ed_header
 {
@@ -87,19 +87,19 @@ body { margin: 0px; background-color: #000000;}
       background-color: #151515;
       box-shadow: 0 0 5px #151515;
     }
-    50% {
+    25% {
       background-color: #771515;
       box-shadow: 0 0 20px #771515;
     }
-    100% {
+    50% {
       background-color: #ff1515;
       box-shadow: 0 0 5px #ff1515;
     }
-    50% {
+    75% {
         background-color: #771515;
         box-shadow: 0 0 20px #771515;
     }
-    0% {
+    100% {
         background-color: #151515;
         box-shadow: 0 0 5px #151515;
     }

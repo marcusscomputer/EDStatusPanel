@@ -93,7 +93,7 @@ function ED_populateStatusPanel()
 	{ $diff = 32-strlen($bin); for ($i=0; $i<$diff; $i++) { $fullbin = $fullbin . "0"; } $fullbin = $fullbin.$bin; }
 	
 	$texts = array(
-	"SRV HNDB",
+	"SRV HIGHB",
 	"FSD JUMP",
 	"ALTITUDE",
 	"NIGHT VSN",
@@ -114,9 +114,9 @@ function ED_populateStatusPanel()
 	"MASS LOCK",
 	
 	"SRV D.A.",
-	"SRVTRT D",
-	"SRV TRT",
-	"SRV HB",
+	"SRV TRT D",
+	"SRV TRRT",
+	"SRV HNDB",
 	
 	"FUEL SCP",
 	"SILENT",
