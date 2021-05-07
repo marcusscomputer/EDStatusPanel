@@ -16,3 +16,6 @@ The top right shows the current state of events. There are 32 labelled indicator
 The bottom left is simply a collection of received chat messages, with the latest message on top.
 
 The bottom right is an exploration log of the current session. It shows quite a number of things, such as FSS results, details of scanned orbital bodies... etc. It also shows if a planet has been discovered previously (D), if it has been mapped with the DSS (M) and if it is landable (L). In addition it highlights if a system scan is completed. Further, it lets you know if POI's have been found on the planet, and if so, how many, plus, their names with distance.
+
+## Web server
+My local installation uses PHP 8.0, may work with 7.x also. I have been told that sometimes there could be a permissions issue on the folder and/or files in the web server, should you see a black page when opening panel.php .
