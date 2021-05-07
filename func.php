@@ -109,8 +109,8 @@ function ED_populateStatusPanel()
 	"OVERHEAT",
 	
 	"LOW FL",
-	"FSD CD",
-	"FSD CHR",
+	"FSD CLD",
+	"FSD CHRG",
 	"MASS LOCK",
 	
 	"SRV D.A.",
