@@ -8,6 +8,8 @@ The file panel.php is the main file to open the status monitor.
 
 Put the browser that displays the panel to full screen mode so that everything aligns perfectly on a 1080p screen.
 
+Obviously, the game needs to run for this to work.
+
 ## Panels
 The top left shows your current location info, and if available, which body you have last approached. It includes a galaxy graphic showing Sol's position in blue and your position in red. Further you see your current absolute coordinates.
 
