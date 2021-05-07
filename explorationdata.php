@@ -17,7 +17,10 @@ function ED_getExplorationData()
 		
 		if ($data[$i]["event"] == $events[1])
 		{
-			echo "<b><font color=#990099>SIGNAL DISCOVERED</font></b>: " . $data[$i]["SignalName"] . " ";
+			if ($data[$i]["SignalName_Localised"] != "")
+			{ echo "<b><font color=#990099>SIGNAL DISCOVERED</font></b>: " . $data[$i]["SignalName_Localised"] . " "; }
+			else
+			{ echo "<b><font color=#990099>SIGNAL DISCOVERED</font></b>: " . $data[$i]["SignalName"] . " "; }
 			if ($data[$i]["IsStation"] == true) { echo "<u><b><font color=#FFFF00>[S]</font></b></u> "; }
 			echo "<br>";
 		}

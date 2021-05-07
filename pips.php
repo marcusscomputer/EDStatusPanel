@@ -11,6 +11,7 @@ function ED_pip1()
 	$value = $pips[0] / 8.0;
 	$hght = 312 - (312*$value);
 	echo "<div style='position: absolute; top: 0px; left: 0px; width: 100%; height: ".intval($hght)."px; background-color: #151515;'></div>";
+	echo "<div style='position: absolute; top: 0px; left: 0px; width: 85px; height: 312px;'><img src='img/pipDividers.png'></div>";
 }
 
 function ED_pip2()
@@ -21,6 +22,7 @@ function ED_pip2()
 	$value = $pips[1] / 8.0;
 	$hght = 312 - (312*$value);
 	echo "<div style='position: absolute; top: 0px; left: 0px; width: 100%; height: ".intval($hght)."px; background-color: #151515;'></div>";
+	echo "<div style='position: absolute; top: 0px; left: 0px; width: 85px; height: 312px;'><img src='img/pipDividers.png'></div>";
 }
 
 function ED_pip3()
@@ -31,6 +33,7 @@ function ED_pip3()
 	$value = $pips[2] / 8.0;
 	$hght = 312 - (312*$value);
 	echo "<div style='position: absolute; top: 0px; left: 0px; width: 100%; height: ".intval($hght)."px; background-color: #151515;'></div>";
+	echo "<div style='position: absolute; top: 0px; left: 0px; width: 85px; height: 312px;'><img src='img/pipDividers.png'></div>";
 }
 
 ?>
