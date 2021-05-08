@@ -1,0 +1,25 @@
+version: '3.6'
+
+networks:
+  edpanel-network:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+  webserver:
+    image: ${COMPOSE_PROJECT_NAME}_webserver_apache:latest
+    container_name: ${COMPOSE_PROJECT_NAME}_webserver_apache
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./apache/Dockerfile
+      args:
+        - TARGET_PHP_VERSION=${PHP_VERSION}
+    ports:
+      - 8080:80
+      - 8443:443
+    volumes:
+      - ${APP_CODE_PATH_HOST}/.:/var/www/html
+      - ${ED_PATH}:/htdocs/Elite:ro
+    networks:
+      - ${PROJECT_NETWORKS}

@@ -1,0 +1,40 @@
+version: '3.6'
+
+services:
+  webserver:
+    image: ${COMPOSE_PROJECT_NAME}_website_nginx:latest
+    container_name: ${COMPOSE_PROJECT_NAME}_website_webserver_nginx
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ${APP_CODE_PATH_HOST}/:${APP_CODE_PATH_CONTAINER}
+      - ${APP_CODE_PATH_HOST}/.env_docker:/var/www/html/.env
+    networks:
+      - ${PROJECT_NETWORKS}
+
+  php-fpm:
+    image: ${COMPOSE_PROJECT_NAME}_website_application:latest
+    container_name: ${COMPOSE_PROJECT_NAME}_website_php-fpm
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./php-fpm/Dockerfile
+      args:
+        - APP_CODE_PATH=${APP_CODE_PATH_CONTAINER}
+        - APP_GROUP=${APP_GROUP}
+        - APP_GROUP_ID=${APP_GROUP_ID}
+        - APP_USER=${APP_USER}
+        - APP_USER_ID=${APP_USER_ID}
+        - TARGET_PHP_VERSION=${PHP_VERSION}
+        - TZ=${TIMEZONE}
+    volumes:
+      - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+      - ${ED_PATH}:/htdocs/Elite:ro
+    networks:
+      - ${PROJECT_NETWORKS}
