@@ -64,4 +64,7 @@ RUN chmod 755 /var/www/html
 
 COPY ./apache/config/apache.conf /etc/apache2/sites-available/000-default.conf
 
+COPY ./apache/config/.htaccess /tmp/.htaccess
+RUN ["cp", "/tmp/.htaccess", "/var/www/html"]
+
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]

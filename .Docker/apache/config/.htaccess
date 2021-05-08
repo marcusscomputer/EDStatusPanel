@@ -1,0 +1,5 @@
+RewriteEngine On
+AddType text/css .css
+AddType text/javascript .js
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+RewriteRule ^.*$ panel.php [END]
