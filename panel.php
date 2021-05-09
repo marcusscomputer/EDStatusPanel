@@ -30,17 +30,17 @@ header( "refresh:2;url=panel.php" );
 <font size=7>
 <?php
 $id = ED_getShipNameID();
-echo $id[0] . " [" . $id[1]. "]";
+echo "<b>".$id[0] . "</b> [" . $id[1]. "]";
 ?>
 </font><br>
-<font size=4>CMDR. <?php echo ED_getCommanderName(); ?></font>
+<font size=4>CMDR. <?php echo ED_getCommanderName(); ?> - <?php echo $id[2]; ?></font>
 </center>
 </div>
 
 <br><br>
 <table width=95% height=87% cellspacing=3 cellpadding=0 align=center>
 <tr>
-<td valign=middle align=left bgcolor=#262626>
+<td valign=middle align=left bgcolor=#262626 style='border-radius: 10px;'>
 
 <div style="position:relative; top: 0px; width: 100%; height: 400px;">
 <table width=100% height=100% cellspacing=0 cellpadding=0>
@@ -51,15 +51,16 @@ echo $id[0] . " [" . $id[1]. "]";
 <font class="ed_section_text"> <?php $p = ED_getLocation(); echo $p[0]; ?> </font><br>
 <font class="ed_section_text_small">
 <?php
+echo ED_getDockedStation(); echo "<br>";
 $j = ED_getNextJump();
 if (count($j) > 0)
 {
     $s = "";
     if ($j[1] == "O" || $j[1] == "B" || $j[1] == "A" || $j[1] == "F" || $j[1] == "G" || $j[1] == "K" || $j[1] == "M")
     { $s = "<font color=#00EE33><b>[".$j[1]."]</b>"; } else { $s = "<font color=#DD1515>[".$j[1]."]"; }
-    echo "Next in route: ".$j[0]." ".$s;
+    echo "Next: ".$j[0]." ".$s;
 }
-?></font><br><br><br>
+?></font><br><br>
 <font class="ed_section_text_small"> <b>COORDINATES</b><br> <?php echo $p[1][0]." : ".$p[1][1]." : ".$p[1][2]; ?> </font><br><br>
 <font class="ed_section_text_small"> <b>LAST JUMP DISTANCE</b><br> <?php echo $p[2]; ?> LY</font><br><br>
 <font class="ed_section_text_small"> <b>DISTANCE TO SOL:</b><br> <?php echo round( ED_DistToSol() , 2); ?> LY</font><br><br>
@@ -79,7 +80,7 @@ if (count($j) > 0)
 
 </td>
 
-<td valign=top align=left width=50% bgcolor=#262626>
+<td valign=top align=left width=50% bgcolor=#262626 style='border-radius: 10px;'>
 <br>
 <center><font class="ed_section_header">STATUS</font></center>
 
@@ -138,7 +139,7 @@ if (count($j) > 0)
 </tr>
 
 <tr>
-<td valign=top align=left bgcolor=#262626><br>
+<td valign=top align=left bgcolor=#262626 style='border-radius: 10px;'><br>
 <center><font class="ed_section_header">COMMS</font>
 <div style="position:relative; top: 0px; width: 90%; height: 400px; background-color: #151515; text-align: left;">
 <p class="ed_exploration_data">
@@ -146,7 +147,7 @@ if (count($j) > 0)
 </p>
 </div></center>
 </td>
-<td valign=top align=left bgcolor=#262626><br>
+<td valign=top align=left bgcolor=#262626 style='border-radius: 10px;'><br>
 <center><font class="ed_section_header">EXPLORATION</font>
 <div style="position:relative; top: 0px; width: 90%; height: 400px; background-color: #151515; text-align: left;">
 <p class="ed_exploration_data">

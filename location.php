@@ -56,6 +56,13 @@ function ED_getNextJump()
 }
 
 
+function ED_getDockedStation()
+{
+	$e = ED_getContentFromEvent("Docked", "StationName");
+	return $e;
+}
+
+
 function ED_DistToSol()
 {
 	$p = ED_getLocation();
