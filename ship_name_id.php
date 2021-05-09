@@ -11,6 +11,7 @@ function ED_getShipNameID()
 	
 	$res3 = "";
 	if ($ship == "asp") { $res3= "Asp Explorer"; }
+	if ($ship == "dolphin") { $res3= "Dolphin"; }
 
 	$res = array($res1, $res2, $res3);
 	
