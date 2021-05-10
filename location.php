@@ -59,7 +59,11 @@ function ED_getNextJump()
 function ED_getDockedStation()
 {
 	$e = ED_getContentFromEvent("Docked", "StationName");
-	return $e;
+	$u = ED_getContentFromEvent("Undocked", "StationName");
+	$d = "";
+	if ($e == $u) { $d = ""; } else { $d = $e; }
+
+	return $d;
 }
 
 
