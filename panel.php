@@ -68,7 +68,7 @@ if (count($j) > 0)
 </td>
 <td valign=middle align=left width=50%>
 <div id="glxmap" style="z-index: 98; position: relative; solid; width: 400px; background-color: #151515; border-radius: 10px;"><img src="img/galaxyBackgroundV3.png" style="width:400px; height:400px;">
-<div class="ed_sol_pointer" style="position: absolute; left: 197px; top: 332px;">
+<div class="ed_sol_pointer" style="position: absolute; left: 197px; top: 301px;">
 </div>
 <?php $loc = count($p) - 1; ?>
 <div class="ed_galmap_pointer" style="position: absolute; left: <?php echo intval($p[$loc][0]);?>px; top: <?php echo intval($p[$loc][1]);?>px;"></div>

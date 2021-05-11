@@ -21,7 +21,7 @@ function ED_getLocation()
 	{ $r[] = ED_getContentFromEvent("ApproachBody", "Body"); }
 	
 	$sol_x = 200 - 5;
-	$sol_y = 335 - 5;
+	$sol_y = 304 - 5;
 	
 	$xp = $r[1][0] / 400; $yp = $r[1][2] / 400; 
 	$posptr_x = $sol_x + $xp;
