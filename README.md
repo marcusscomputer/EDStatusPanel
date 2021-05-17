@@ -37,10 +37,10 @@ If you have a route set, it will automatically be displayed in the galaxy map.
 
 While the Location panel only can only display this one page, the other three have links on top to switch between them. The following switches are implemented:
 
-pi.php?panel=location - Shows the location panel
-pi.php?panel=status - The status panel with indicators, fuel, and pips (links on top)
-pi.php?panel=comms - Chat messages of the session (links on top)
-pi.php?panel=exp - Exploration data of the session (links on top)
+- pi.php?panel=location - Shows the location panel
+- pi.php?panel=status - The status panel with indicators, fuel, and pips (links on top)
+- pi.php?panel=comms - Chat messages of the session (links on top)
+- pi.php?panel=exp - Exploration data of the session (links on top)
 
 Just to get the obvious out of the way: the Pi needs to have a graphical desktop environment and a browser, such as Firefox (recommended), Chromium, etc. Navigate to the local IP and pi.php with the corresponding switch to see the panel you want.
 
