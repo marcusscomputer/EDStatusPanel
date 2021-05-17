@@ -105,40 +105,19 @@ a:visited
     height: 550px;
 }
 
-@keyframes glowing_red {
-    0% {
-      background-color: #151515;
-      box-shadow: 0 0 5px #151515;
-    }
-    25% {
-      background-color: #771515;
-      box-shadow: 0 0 20px #771515;
-    }
-    50% {
-      background-color: #ff1515;
-      box-shadow: 0 0 5px #ff1515;
-    }
-    75% {
-        background-color: #771515;
-        box-shadow: 0 0 20px #771515;
-    }
-    100% {
-        background-color: #151515;
-        box-shadow: 0 0 5px #151515;
-    }
-}
 
 .ed_statusbox_red
 {
 	width: 100%;
 	height: 100%;
+    background-color: #cd0000;
+    box-shadow: 0 0 10px #cd0000;
 	font-family: "EurostileBold";
 	font-size: 15px;
 	color: #FFFFFF;
 	display: flex;
   	justify-content: center;
   	align-items: center;
-    animation: glowing_red 2000ms infinite;
     border-radius: 10px;
 }
 .ed_statusbox_green
