@@ -8,7 +8,20 @@
     src: url('ttf/EurostileBold.ttf'); /*URL to font*/
 }
 
-body { margin: 0px; background-color: #040404;}
+body { margin: 0px; background-color: #040404; overflow: hidden; }
+
+a
+{
+    color: #fdb100;
+    font-size: 20px;
+    font-family: "Eurostile";
+}
+a:visited
+{
+    color: #fdb100;
+    font-size: 20px;
+    font-family: "Eurostile";
+}
 
 .ed_header
 {
@@ -17,9 +30,6 @@ body { margin: 0px; background-color: #040404;}
     font-family: "Eurostile";
     color: #FEFEFE;
 }
-
-.ed_link
-{ color: #fdb100; }
 
 .ed_section_header
 {
@@ -82,6 +92,17 @@ body { margin: 0px; background-color: #040404;}
     width: 100%;
     padding-left: 10px;
     height: 390px;
+}
+
+.ed_exploration_data_pi
+{
+	font-family: "Eurostile";
+    color: #FEFEFE;
+    font-size: 21px;
+    overflow-y: scroll;
+    width: 100%;
+    padding-left: 10px;
+    height: 550px;
 }
 
 @keyframes glowing_red {

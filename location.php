@@ -27,7 +27,7 @@ function ED_getLocation()
 	$posptr_x = $sol_x + $xp;
 	$posptr_y = $sol_y + $yp;
 	$r[] = array($posptr_x, $posptr_y);
-	
+
 	return $r;
 }
 
@@ -49,6 +49,34 @@ function ED_getNextJump()
 		{
 			if ($route["Route"][$i]["StarSystem"] == $loc && $i <= count($route["Route"])-1)
 			{ $j[] = $route["Route"][$i+1]["StarSystem"]; $j[] = $route["Route"][$i+1]["StarClass"]; break; }
+		}
+	}
+
+	return $j;
+}
+
+
+function ED_getAllJumps()
+{
+	$j = array();
+
+	$routefile = $GLOBALS["ed_journal_folder"]."/NavRoute.json";
+	if (file_exists($routefile) == true)
+	{
+		$locdata = ED_getLocation();
+		$loc = $locdata[0];
+
+		$routedata = file_get_contents($routefile);
+		$route = json_decode($routedata, true);
+		for ($i=0; $i<count($route["Route"])-1; $i++)
+		{
+			if ($route["Route"][$i]["StarSystem"] == $loc && $i <= count($route["Route"])-1)
+			{
+				$t = array();
+				$t[] = $route["Route"][$i+1]["StarSystem"];
+				$t[] = $route["Route"][$i+1]["StarPos"];
+				$j[] = $t;
+			}
 		}
 	}
 
