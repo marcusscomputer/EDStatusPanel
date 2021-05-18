@@ -11,7 +11,8 @@ If you want to hit the ground running:
 - Open the XAMPP control panel through the Start Menu on Windows
 - At the Apache entry, click the "Start" button
 - RUN THE GAME and enter it in any mode you like (doesn't matter if Solo or Open)
-- Open a web browser on any machine (Raspberry Pi, laptop, doesn't matter) and navigate to the IP address of your computer, and the path to the panels, for example: http://192.168.1.46/panel/pi.php?panel=location or =status in the end, depending on what you want
+- Open a web browser on any machine (Raspberry Pi, laptop, doesn't matter) and navigate to the IP address of your computer, and the path to the panels, for example: http://192.168.1.46/panel/
+- Select what you want!
 - You can find the IP address of your computer by opening a Command Prompt in Windows and typing "ipconfig"
 - If everything went well, you should now see a live-updating panel. Congrats!
 
