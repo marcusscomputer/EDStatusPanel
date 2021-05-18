@@ -1,6 +1,20 @@
 # EDStatusPanel
  A status monitor for Elite Dangerous, written in PHP. Designed for 1080p screens in the four-panel-view in panel.php, and for 7 inch screens with a resolution of 1024x600 connected to a Raspberry Pi.
 
+## QUICK START GUIDE
+If you want to hit the ground running:
+- Install XAMPP (Apache Friends) on the computer you are running Elite Dangerous on
+- Download this repository as zip file (click the green "Code" button and Download Zip)
+- Place the content in the the htdocs folder of where you installed XAMPP - for example, C:\xampp\htdocs
+- Rename the folder from "EDStatusPanel-main" to something nicer, say, "ed" or "panel"
+- Open the file "inc.php" in a text editor and adjust the resolution to your screen, also adjust the folder to where your Elite Dangerous Journal files are stored
+- Open the XAMPP control panel through the Start Menu on Windows
+- At the Apache entry, click the "Start" button
+- RUN THE GAME and enter it in any mode you like (doesn't matter if Solo or Open)
+- Open a web browser on any machine (Raspberry Pi, laptop, doesn't matter) and navigate to the IP address of your computer, and the path to the panels, for example: http://192.168.1.46/panel/pi.php?panel=location or =status in the end, depending on what you want
+- You can find the IP address of your computer by opening a Command Prompt in Windows and typing "ipconfig"
+- If everything went well, you should now see a live-updating panel. Congrats!
+
 ## IMPORTANT
 Make sure that the path stated in inc.php is accessible by the web server you are putting these files on. Otherwise the monitor won't work.
 

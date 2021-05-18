@@ -47,7 +47,7 @@ if ($_GET["panel"] != "location")
 </head>
 
 <body>
-<table width=1024 height=600 cellspacing=0 cellpadding=0>
+<table width=<?php echo $GLOBALS["ed_location_panel_res"][0]; ?> height=<?php echo $GLOBALS["ed_location_panel_res"][1]; ?> cellspacing=0 cellpadding=0>
 <tr>
 <td valign=top align=left bgcolor=#262626>
 
@@ -197,9 +197,9 @@ if ($_GET["panel"] == "location") // DISPLAY PI SPECIFIC LOCATION PANEL
     
     $docked = ED_getDockedStation();
     echo '
-<table width=1024 height=600 cellspacing=0 cellpadding=0 align=left>
+<table width='.$GLOBALS["ed_location_panel_res"][0].' height='.$GLOBALS["ed_location_panel_res"][1].' cellspacing=0 cellpadding=0 align=left>
 <tr height=50>
-<td valign=middle align=center width=1024 height=50>
+<td valign=middle align=center width='.$GLOBALS["ed_location_panel_res"][0].' height=50>
 
 <table width=90% border=0 height=50 align=center>
 <tr>
@@ -219,13 +219,13 @@ echo '<td valign=middle align=right>
 
 </td>
 </tr>
-<tr height=500>
-<td valign=middle align=center width=1024 height=500>
-<div id="edmap" style="width: 1024px; height: 500px;"></div>
+<tr height='.$GLOBALS["ed_location_panel_maph"].'>
+<td valign=middle align=center width='.$GLOBALS["ed_location_panel_res"][0].' height='.$GLOBALS["ed_location_panel_maph"].'>
+<div id="edmap" style="width: '.$GLOBALS["ed_location_panel_res"][0].'px; height: '.$GLOBALS["ed_location_panel_maph"].'px;"></div>
 </td>
 </tr>
 <tr height=50>
-<td valign=middle align=center width=1024 height=50>
+<td valign=middle align=center width='.$GLOBALS["ed_location_panel_res"][0].' height=50>
 
 <table width=90% border=0 height=50 align=center>
 <tr>
@@ -255,11 +255,11 @@ Ed3d.init({
     jsonPath    : "data/data.json",
     withHudPanel : false,
     hudMultipleSelect : false,
-    effectScaleSystem : [10,800],
+    effectScaleSystem : [25,5000],
     startAnim: false,
     showGalaxyInfos: true,
     showNameNear: true,
-    systemColor: "#11ffee",
+    systemColor: "#ddff11",
     playerPos: ['.$p[1][0].','.$p[1][1].','.$p[1][2].'],
     cameraPos: ['.$p[1][0].','.$cy.','.$cz.']
 });
