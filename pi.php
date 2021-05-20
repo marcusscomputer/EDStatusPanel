@@ -55,8 +55,8 @@ if ($_GET["panel"] != "location")
 if ($_GET["panel"] == "location") // DISPLAY PI SPECIFIC LOCATION PANEL
 {
     $p = ED_getLocation();
-    $cy = 0 - $p[1][1] + 450;
-    $cz = 0 + $p[1][2] * 10;
+    $cy = 0 - $p[1][1] + 1000;
+    $cz = 0 + $p[1][2] * 3;
 
     // Before we proceed, we will check for the existence of the data.json file -
     // if it does not exist, simply put in the current system as first entry and
