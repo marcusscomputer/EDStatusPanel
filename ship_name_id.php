@@ -10,8 +10,9 @@ function ED_getShipNameID()
 	$ship = ED_getContentFromEvent("Loadout", "Ship");
 	
 	$res3 = "";
-	if ($ship == "asp") { $res3= "Asp Explorer"; }
-	if ($ship == "dolphin") { $res3= "Dolphin"; }
+	if ($ship == "asp") 		{ $res3 = "Asp Explorer"; }
+	if ($ship == "dolphin") 	{ $res3 = "Dolphin"; }
+	if ($ship == "cobramkiii")	{ $res3 = "Cobra Mk. III"; }
 
 	$res = array($res1, $res2, $res3);
 	

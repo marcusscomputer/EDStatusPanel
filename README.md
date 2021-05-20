@@ -1,6 +1,9 @@
 # EDStatusPanel
  A status monitor for Elite Dangerous, written in PHP. Designed for 1080p screens in the four-panel-view in panel.php, and for 7 inch screens with a resolution of 1024x600 connected to a Raspberry Pi.
 
+## HORIZONS / ODYSSEY COMPATIBILITY
+I have tested the panels in Odyssey and they work as they would in Horizons. Frontier added a second Status Flags section (Flags2) which mostly contains information about on-foot events. The ship and SRV info remained the same, hence no compatibility issues.
+
 ## QUICK START GUIDE
 If you want to hit the ground running:
 - Install XAMPP (Apache Friends) on the computer you are running Elite Dangerous on
